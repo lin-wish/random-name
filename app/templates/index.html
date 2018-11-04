@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Random Name</title>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A app for generating random names.">
+
+    <link rel="stylesheet" href="../static/pure-min.css">
+    <link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" href="../static/profile.css">
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="">Random Name</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item pure-menu-selected"><a href="/" class="pure-menu-link">Home</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="splash-container">
+        <div class="splash">
+            {% if profile %}
+            <div class="card">
+                    <img src="{{ profile.photo }}" alt="{{ profile.name }}" style="width:100%">
+                    <div>
+                    <h1 id="profile-name">{{ profile.name }}</h1>
+                </div>
+                    <p class="title">{{ profile.email }}</p>
+                    <p>Gender: {{ profile.gender }}</p>
+                    <p>Region: {{ profile.region }}</p>
+                    <p>Age: {{ profile.age }}</p>
+                    <p>Phone: {{ profile.phone }}</p>
+                    <div style="margin: 24px 0;">
+                      <a href="#"><i class="fa fa-dribbble"></i></a> 
+                      <a href="#"><i class="fa fa-twitter"></i></a>  
+                      <a href="#"><i class="fa fa-linkedin"></i></a>  
+                      <a href="#"><i class="fa fa-facebook"></i></a> 
+                   </div>
+                   <p><button id="profile" onclick="location.href='./randnames';">Get Another</button></p>
+                  </div>
+
+                  {% else %}
+            <div class="splash-head">
+                <p class="splash-subhead">
+                    <h5>Get random names by one click</h5>
+                </p>
+            </div>
+            
+            <div class="l-box is-center">
+                <button  type="button" onclick="location.href='./randnames';" class="pure-button pure-button-primary">Get Name</button>
+            </div>
+            {% endif %}
+        </div>
+
+    </div>
+
+
+
+    <div class="footer l-box is-center">
+        Created By Linwish.
+    </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
