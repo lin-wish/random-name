@@ -1,4 +1,4 @@
-# Random Name
+# Random Names
 A simple app for generating random names. Written in python and flask. 
 
 ## Dependencies
