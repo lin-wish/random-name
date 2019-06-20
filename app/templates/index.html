@@ -21,14 +21,13 @@
     <!--<![endif]-->
 
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-
 </head>
 
 <body>
 
     <div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-            <a class="pure-menu-heading" href="">Random Name</a>
+            <a class="pure-menu-heading" href="">Random Names</a>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item pure-menu-selected"><a href="/" class="pure-menu-link">Home</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
@@ -36,10 +35,10 @@
         </div>
     </div>
 
-    <div class="splash-container">
-        <div class="splash">
+    <div class="splash-container" style="overflow: auto">
+        <div class="splash" >
             {% if profile %}
-            <div class="card">
+            <div class="card" >
                     <img src="{{ profile.photo }}" alt="{{ profile.name }}" style="width:100%">
                     <div>
                     <h1 id="profile-name">{{ profile.name }}</h1>
